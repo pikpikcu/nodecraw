@@ -1,6 +1,6 @@
 # Web Crawling Application
 
-This is a Node.js application that allows you to perform web crawling on specified URLs. It utilizes various modules and libraries to crawl web pages, extract information, and save the results.
+nodecraw allows you to perform web crawling on specified URLs. It utilizes various modules and libraries to crawl web pages, extract information, and save the results.
 
 ## Features
 
@@ -13,7 +13,9 @@ This is a Node.js application that allows you to perform web crawling on specifi
 ## Installation
 
 1. Make sure you have [Node.js](https://nodejs.org/) installed on your system.
-2. `npm i nodecraw -g`.
+2. Clone this repository or download the source code.
+3. Navigate to the project directory.
+4. Run `npm install` to install the required dependencies.
 
 ## Usage
 
@@ -22,7 +24,7 @@ To start crawling, you can use the following command:
 
 Replace `<url>` with the target URL you want to crawl.
 
-`nodecraw -h`
+`./nodecraw.js -h`
 
 You can also use the following options:
 
@@ -34,12 +36,12 @@ You can also use the following options:
 For example, to crawl a list of URLs from a file and save the results to an output file, you can use the following command:
 
 ```
-nodecraw -u example.com -o output.txt
+./nodecraw.js -u example.com -o output.txt
 
 ```
 
 ```
-nodecraw -l urls.txt -o output.txt
+./nodecraw.js -l urls.txt -o output.txt
 ```
 
 Make sure to replace `urls.txt` with the path to your file containing the list of URLs.
