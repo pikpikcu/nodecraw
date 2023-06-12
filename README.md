@@ -1,50 +1,72 @@
 # NodeCraw (Web Crawling Application)
 
-nodecraw allows you to perform web crawling on specified URLs. It utilizes various modules and libraries to crawl web pages, extract information, and save the results.
+NodeCraw is a web crawling application that allows you to crawl specified URLs and extract information from web pages. It utilizes various modules and libraries to perform crawling and save the results.
 
 ## Features
 
-- Crawling using headless browsers (Playwright and Puppeteer)
-- HTTP crawling with configurable options
-- Integration with Web Archive for accessing archived URLs
-- Saving crawled data to JSON files or outputting to the console
-- Timeout feature to limit the crawling duration
+- Web crawling using different techniques:
+  - PlaywrightCrawler: Uses Playwright to navigate and crawl web pages.
+  - PuppeteerCrawler: Uses Puppeteer to crawl web pages and extract data.
+  - Crawler: Uses the 'crawler' module to crawl web pages.
+  - Web Archive Crawler: Retrieves archived versions of web pages from the Wayback Machine.
+
+- Support for recursive crawling: Enables crawling through links found on the web pages to discover and crawl more pages.
+
+- Output customization:
+  - Specify the output file to save the crawled URLs.
+  - Choose different output formats: TXT or JSON.
+
+- Timeout functionality: Set a timeout duration to limit the crawling process.
+
+- Command-line interface (CLI) for easy usage.
 
 ## Installation
 
-1. Make sure you have [Node.js](https://nodejs.org/) installed on your system.
-2. Clone this repository or download the source code.
-3. Navigate to the project directory.
-4. Run `npm install` to install the required dependencies.
+1. Clone the repository:
 
+   ```shell
+   git clone https://github.com/pikpikcu/nodecraw.git
+   ```
+2. Navigate to the project directory:
+
+    ```
+    cd nodecraw
+    ```
+3. Install the dependencies:
+    ```
+    npm install
+    ```
 ## Usage
-
 To start crawling, you can use the following command:
-
-
-Replace `<url>` with the target URL you want to crawl.
-
-`./nodecraw.js -h`
-
 You can also use the following options:
-
-- `-u, --url <url>`: Specify a single target URL.
-- `-l, --list <file>`: Specify a list of target URLs from a file.
-- `-o, --output <file>`: Specify the output file to save the crawled URLs.
-- `-t, --timeout <timeout>`: Specify the timeout duration in seconds.
-
-For example, to crawl a list of URLs from a file and save the results to an output file, you can use the following command:
-
 ```
-./nodecraw.js -u example.com -o output.txt
+node nodecraw.js -h
+Usage: nodecraw [options]
 
+Options:
+  -u, --url <url>                    Specify a single target URL
+  -l, --list <file>                  Specify a list of target URLs
+  -a, --aggressive <maxConcurrency>  Set the maximum concurrency for aggressive crawling
+  -r, --recursive                    Enable recursive crawling
+  -t, --timeout <timeout>            Specify the timeout duration
+  -o, --output <file>                Specify the output file
+  -h, --help                         display help for command
 ```
+### Crawling a Single URL
+To crawl a single URL, use the `-u` or `--url` option followed by the target URL:
 
-```
-./nodecraw.js -l urls.txt -o output.txt
-```
+    
+    node nodecraw.js -u <target-url>
+    
+    
+## Crawling from a List of URLs
+To crawl multiple URLs from a list, use the `-l` or `--list` option followed by the path to the file containing the URLs:
 
-Make sure to replace `urls.txt` with the path to your file containing the list of URLs.
+    
+    node nodecraw.js -l <path-to-file>
+    
+    
+This will crawl the URLs listed in the urls.txt file.
 
 ## License
 
