@@ -1,8 +1,11 @@
-# NodeCraw (Web Crawling Application)
+<h1 align="center">
+  NODECRAW
+  <br>
+</h1>
 
-NodeCraw is a web crawling application that allows you to crawl specified URLs and extract information from web pages. It utilizes various modules and libraries to perform crawling and save the results.
+Nodesub is a command-line tool for finding subdomains in bug bounty programs. It supports various subdomain enumeration techniques and provides flexible options for customization.
 
-## Features
+# Features
 
 - Web crawling using different techniques:
   - PlaywrightCrawler: Uses Playwright to navigate and crawl web pages.
@@ -36,11 +39,15 @@ NodeCraw is a web crawling application that allows you to crawl specified URLs a
     ```
     npm install
     ```
+***Easy Install with `npm`***
+```
+npm install -g nodecraw
+```
 ## Usage
 To start crawling, you can use the following command:
 You can also use the following options:
 ```
-node nodecraw.js -h
+nodecraw -h
 Usage: nodecraw [options]
 
 Options:
@@ -56,14 +63,14 @@ Options:
 To crawl a single URL, use the `-u` or `--url` option followed by the target URL:
 
     
-    node nodecraw.js -u <target-url>
+    nodecraw -u <target-url>
     
     
 ## Crawling from a List of URLs
 To crawl multiple URLs from a list, use the `-l` or `--list` option followed by the path to the file containing the URLs:
 
     
-    node nodecraw.js -l <path-to-file>
+    nodecraw -l <path-to-file>
     
     
 This will crawl the URLs listed in the urls.txt file.
