@@ -1,11 +1,10 @@
 {
     "name": "nodecraw",
-    "version": "1.0.2",
+    "version": "1.0.5",
     "type": "module",
-    "description": "A web crawling application",
-    "main": "nodecraw.js",
-    "scripts": {
-        "start": "node nodecraw.js"
+    "description": "NodeCraw is a web crawling application that allows you to crawl specified URLs and extract information from web pages. It utilizes various modules and libraries to perform crawling and save the results.",
+    "bin": {
+        "nodecraw": "nodecraw.js"
     },
     "keywords": [
         "web",
@@ -20,7 +19,7 @@
         "commander": "^10.0.1",
         "crawlee": "^3.3.3",
         "crawler": "^1.4.0",
-        "nodecraw": "^1.0.2",
+        "nodecraw": "^1.0.4",
         "playwright": "^1.35.0",
         "puppeteer": "^20.5.0"
     }
