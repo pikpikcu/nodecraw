@@ -1,3 +1,5 @@
+#!/usr/local/bin/node
+
 import { PlaywrightCrawler, LogLevel, Log, Dataset, CheerioCrawler } from 'crawlee';
 import puppeteer from 'puppeteer';
 import crawler from 'crawler';
