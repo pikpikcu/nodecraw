@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 
 import { PlaywrightCrawler, LogLevel, Log, Dataset, CheerioCrawler } from 'crawlee';
 import puppeteer from 'puppeteer';
